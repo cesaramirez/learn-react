@@ -6,6 +6,9 @@ class StorePicker extends Component {
 
   goToStore = e => {
     e.preventDefault();
+    const name = this.storeName.current.value;
+
+    this.props.history.push(`/store/${name}`);
   };
 
   render() {
